@@ -37,7 +37,7 @@ public abstract class AbstractDeck implements Deck {
     @Override
     public void newOrder(Deck deck) {
         for (int i = 0; i < cards.size() - 1; i++) {
-            if (cards.get(i).compareTo(cards.get(i + 1)) == 1) {
+            if (cards.get(i).getSuit().compareTo(cards.get(i + 1).getSuit()) == 1) {
                 cards.add(i + 1,cards.remove(i));
                 i = 0;
             }
